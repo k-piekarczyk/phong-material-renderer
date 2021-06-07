@@ -103,8 +103,8 @@ class Camera:
         return x, z
 
     def shoot_ray(self, i, j):
-        x, z = self.camera_to_world(i, j)
-        ray = Ray(Vec3(0, 0, 0), Vec3(z, self.focal, -x))
+        x, y = self.camera_to_world(i, j)
+        ray = Ray(Vec3(0, 0, 0), Vec3(y, self.focal, -x))
         return ray
 
 
